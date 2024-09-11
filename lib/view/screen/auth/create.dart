@@ -27,14 +27,6 @@ class _CreateState extends State<Create> {
             width: 150,
             child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
-            }),
-          )
-        ],
       ),
       body:Center(
         child:Padding(
