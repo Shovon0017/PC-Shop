@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pc_mart/common%20widget/CommonIcon.dart';
 
 class NotificationShow extends StatelessWidget {
   const NotificationShow({super.key});
@@ -10,9 +12,9 @@ class NotificationShow extends StatelessWidget {
       appBar:  AppBar(
         backgroundColor: Color(0xffFFFFFF),
         title: SizedBox(
-            height: 32,
-            width: 114,
-            child: Image.asset("images/splash logo.png")),
+            height: 40,
+            width: 150,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
       ),
       body: Column(

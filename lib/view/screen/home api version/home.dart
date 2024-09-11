@@ -4,9 +4,11 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_text.dart';
 import 'package:pc_mart/common%20widget/search_field.dart';
 import 'package:pc_mart/controller/getX%20controller/ProductListController.dart';
+import 'package:pc_mart/view/screen/notification/notification.dart';
 
 
 class Home extends StatelessWidget {
@@ -15,10 +17,22 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HomeController controller=Get.put(HomeController());
-    return Scaffold(
+    return Scaffold( backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
-        title:Image.asset("images/pcmart.jpg"),
+        backgroundColor: Color(0xffFFFFFF),
+        title: SizedBox(
+            height: 40,
+            width: 150,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

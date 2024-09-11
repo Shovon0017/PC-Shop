@@ -18,7 +18,6 @@ class _Login2State extends State<Login2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xffffffff),
       appBar:AppBar(
         backgroundColor: Color(0xffFFFFFF),
@@ -31,40 +30,42 @@ class _Login2State extends State<Login2> {
       body:Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal:20),
-          child: Column(
-            children: [
-              SizedBox(
-                width: double.infinity,
-                child: Image.asset("images/signin.png"),
-              ),
-              const ListTile(
-                leading: Text("Enter Your Mobile Number",style: TextStyle(fontSize: 15,color: Color(0xff4d4d4d)),),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.phone),
-                    hintText: "01xxxxxxxxx",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(width: 1))),
-              ),
-              const ListTile(
-                leading: Text("Password",style: TextStyle(fontSize: 15,color: Color(0xff4d4d4d)),),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.lock),
-                    hintText: "Password (8 to 32)",
-                    suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(width: 1))),
-              ),
-              const SizedBox(height: 30),
-              CommonButton(buttonName: "Sign In", onTap: () {
-                Get.to(()=>NavigationBarShow());
-              })
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: Image.asset("images/signin.png"),
+                ),
+                const ListTile(
+                  leading: Text("Enter Your Mobile Number",style: TextStyle(fontSize: 15,color: Color(0xff4d4d4d)),),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.phone),
+                      hintText: "01xxxxxxxxx",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(width: 1))),
+                ),
+                const ListTile(
+                  leading: Text("Password",style: TextStyle(fontSize: 15,color: Color(0xff4d4d4d)),),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.lock),
+                      hintText: "Password (8 to 32)",
+                      suffixIcon: const Icon(Icons.remove_red_eye_outlined),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(width: 1))),
+                ),
+                const SizedBox(height: 30),
+                CommonButton(buttonName: "Sign In", onTap: () {
+                  Get.to(()=>NavigationBarShow());
+                })
+              ],
+            ),
           ),
         ),
       ),
