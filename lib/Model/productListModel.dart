@@ -22,18 +22,18 @@ class ProductLIstModel {
 }
 
 class Products {
-  int? productId;
-  int? categoryId;
-  int? subCategoryId;
-  int? childCategoryId;
+  num? productId;
+  num? categoryId;
+  num? subCategoryId;
+  num? childCategoryId;
   String? nameEn;
   String? image;
-  int? regPrice;
-  int? disType;
-  int? disPrice;
+  num? regPrice;
+  num? disType;
+  num? disPrice;
   String? brand;
   String? stock;
-  int? rating;
+  num? rating;
 
   Products(
       {this.productId,

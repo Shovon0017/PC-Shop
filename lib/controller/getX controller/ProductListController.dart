@@ -7,10 +7,9 @@ import 'package:pc_mart/controller/api%20service/ProductListService.dart';
 
 
 class HomeController extends GetxController {
-
   List<Products> finalProductList = [];
   List<Products> productList = [];
-  RxList<ProductLIstModel> cardProductList = <ProductLIstModel>[].obs;
+  RxList<Products> cardProductList = <Products>[].obs;
   RxBool isLoading = false.obs;
   getProduct() async {
     finalProductList= await ProductListService.productListService();
@@ -32,11 +31,6 @@ class HomeController extends GetxController {
         .toList();
     log("=================Data : ${productList.length}");
     isLoading.value = false;
-  }
-
-
-  addToCartFun({required ProductLIstModel data})async{
-    cardProductList.add(data);
   }
 
   @override

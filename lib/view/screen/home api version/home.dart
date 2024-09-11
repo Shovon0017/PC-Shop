@@ -55,72 +55,38 @@ class Home extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CommonText(
-                      title:
-                      "Total Item : ${controller.productList.length}",fSize: 16,),
                     GridView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
+                      physics:PageScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: controller.productList.length,
                       gridDelegate:
-                      const SliverGridDelegateWithFixedCrossAxisCount(
+                       SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                       ),
                       itemBuilder: (context, index) {
                         var data = controller.productList[index];
-                        return Stack(
-                          clipBehavior: Clip.none,
-                          alignment: Alignment.topRight,
-                          children: [
-                            Card(
-                              child: SizedBox(
-                                height: 220,
-                                width:
-                                MediaQuery.sizeOf(context).width /
-                                    2.2,
-                                child: Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        height: 150,
-                                        width:
-                                        MediaQuery.sizeOf(context)
-                                            .width /
-                                            2.2,
-                                        child: Image.network(
-                                          "https://cit-ecommerce-codecanyon.bandhantrade.com/${data.image}",fit: BoxFit.fitWidth,),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding:
-                                      const EdgeInsets.symmetric(
-                                          horizontal: 10,
-                                          vertical: 3),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                        children: [
-                                          CommonText(
-                                              title: "ID : ${data.productId}"),
-                                          CommonText(
-                                              title:
-                                              "Name : ${data.nameEn}"),
-                                          CommonText(
-                                              title:
-                                              "Price : ${data.regPrice}Tk"),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                        return Card(
+                          child: SizedBox(
+                            height: 220,
+                            width:
+                            MediaQuery.sizeOf(context).width /
+                                2.2,
+                            child: Column(
+                              crossAxisAlignment:
+                              CrossAxisAlignment.start,
+                              children: [
+                                Image.asset("${data.image}"),
+                                CommonText(
+                                    title: "ID : ${data.productId}"),
+                                CommonText(
+                                    title:
+                                    "Name : ${data.nameEn}"),
+                                CommonText(
+                                    title:
+                                    "Price : ${data.regPrice}Tk"),
+                              ],
                             ),
-                            // IconButton(onPressed: (){
-                            //   controller.addToCartFun(data:data);
-                            // }, icon: Icon(Icons.add_shopping_cart_outlined))
-                          ],
+                          ),
                         );
                       },
                     ),
