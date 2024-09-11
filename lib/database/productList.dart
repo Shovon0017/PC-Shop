@@ -3,6 +3,7 @@ class ProductList{
     "products": [
       {
         "id": "1",
+        "Images":"images/Intel_Core_i9_13900K_header_5.png",
         "name": "Intel Core i9-13900K",
         "category": "Processor",
         "brand": "Intel",
@@ -18,6 +19,7 @@ class ProductList{
       },
       {
         "id": "2",
+        "Images":"images/geforce-rtx-4090-gaming-oc-24g-01-500x500.webp",
         "name": "NVIDIA GeForce RTX 4090",
         "category": "Graphics Card",
         "brand": "NVIDIA",
@@ -32,6 +34,7 @@ class ProductList{
       },
       {
         "id": "3",
+        "Images":"images/Corsair Vengeance LPX 16GB (2 x 8GB) DDR4.webp",
         "name": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4",
         "category": "Memory",
         "brand": "Corsair",
@@ -46,6 +49,7 @@ class ProductList{
       },
       {
         "id": "4",
+        "Images":"images/970-evo-plus-1tb-500x500.jpg",
         "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
         "category": "Storage",
         "brand": "Samsung",
@@ -60,6 +64,7 @@ class ProductList{
       },
       {
         "id": "5",
+        "Images":"images/asus-rog-strix-z790-e-motherboard-02.jpg",
         "name": "ASUS ROG Strix Z790-E Gaming WiFi",
         "category": "Motherboard",
         "brand": "ASUS",
@@ -75,6 +80,7 @@ class ProductList{
       },
       {
         "id": "6",
+        "Images":"images/Cooler Master Hyper 212 EVO.jpg",
         "name": "Cooler Master Hyper 212 EVO",
         "category": "Cooling",
         "brand": "Cooler Master",
@@ -89,6 +95,7 @@ class ProductList{
       },
       {
         "id": "7",
+        "Images":"images/NZXT H510 Elite.webp",
         "name": "NZXT H510 Elite",
         "category": "Case",
         "brand": "NZXT",
@@ -103,6 +110,7 @@ class ProductList{
       },
       {
         "id": "8",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
         "name": "Logitech G Pro X Wireless",
         "category": "Peripherals",
         "brand": "Logitech",

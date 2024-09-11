@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
             SearchField(
               onChanged: (String text ) {
                 log("===== onChanged : $text ==================");
-                controller.searchFunction(searchText: text);
+                // controller.searchFunction(searchText: text);
               },
             ),
             const SizedBox(height: 10),
@@ -64,8 +64,9 @@ class Home extends StatelessWidget {
                         crossAxisCount: 2,
                       ),
                       itemBuilder: (context, index) {
-                        var data = controller.productList[index];
                         return Card(
+                          elevation: 4,
+                          color: Colors.white,
                           child: SizedBox(
                             height: 220,
                             width:
@@ -73,17 +74,20 @@ class Home extends StatelessWidget {
                                 2.2,
                             child: Column(
                               crossAxisAlignment:
-                              CrossAxisAlignment.start,
+                              CrossAxisAlignment.center,
                               children: [
-                                Image.asset("${data.image}"),
+                                SizedBox(
+                                height: 100,
+                                    width: 100,
+                                    child: Image(image: AssetImage("${controller.productList[index].image}"))),
                                 CommonText(
-                                    title: "ID : ${data.productId}"),
+                                    title: "ID : ${controller.productList[index].productId}"),
                                 CommonText(
                                     title:
-                                    "Name : ${data.nameEn}"),
+                                    "Name : ${controller.productList[index].nameEn}"),
                                 CommonText(
                                     title:
-                                    "Price : ${data.regPrice}Tk"),
+                                    "Price : ${controller.productList[index].regPrice}Tk"),
                               ],
                             ),
                           ),

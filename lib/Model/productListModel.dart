@@ -28,7 +28,7 @@ class Products {
   String? childCategoryId;
   String? nameEn;
   String? image;
-  String? regPrice;
+  num? regPrice;
   String? disType;
   String? disPrice;
   String? brand;
@@ -50,13 +50,13 @@ class Products {
         this.rating});
 
   Products.fromJson(Map<String, dynamic> json) {
-    productId = json['productId'];
+    productId = json['id'];
     categoryId = json['category_id'];
     subCategoryId = json['sub_category_id'];
     childCategoryId = json['child_category_id'];
-    nameEn = json['name_en'];
-    image = json['image'];
-    regPrice = json['reg_price'];
+    nameEn = json['name'];
+    image = json['Images'];
+    regPrice = json['price'];
     disType = json['dis_type'];
     disPrice = json['dis_price'];
     brand = json['brand'];
@@ -66,13 +66,13 @@ class Products {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['productId'] = this.productId;
+    data['id'] = this.productId;
     data['category_id'] = this.categoryId;
     data['sub_category_id'] = this.subCategoryId;
     data['child_category_id'] = this.childCategoryId;
-    data['name_en'] = this.nameEn;
-    data['image'] = this.image;
-    data['reg_price'] = this.regPrice;
+    data['name'] = this.nameEn;
+    data['Images'] = this.image;
+    data['price'] = this.regPrice;
     data['dis_type'] = this.disType;
     data['dis_price'] = this.disPrice;
     data['brand'] = this.brand;

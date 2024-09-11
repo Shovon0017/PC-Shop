@@ -23,7 +23,7 @@ var value=-1;
         focusedBorder: OutlineInputBorder(
             borderSide:  BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
-        labelText: "Search Hospital or Doctors",
+        labelText: "Search Computer Accessories",
         suffixIcon: InkWell(
             onTap: (){
               Get.defaultDialog(
@@ -40,15 +40,15 @@ var value=-1;
                           value: value,
                           items: [
                             DropdownMenuItem(
-                              child: Text("Doctor"),
+                              child: Text("Accessories"),
                               value: -1,
                             ),
                             DropdownMenuItem(
-                                child: Text("Doctor"), value: 0),
+                                child: Text("Mouse"), value: 0),
                             DropdownMenuItem(
-                                child: Text("Doctor"), value: 1),
+                                child: Text("Keyboard"), value: 1),
                             DropdownMenuItem(
-                                child: Text("Doctor"), value: 2)
+                                child: Text("Headphone"), value: 2)
                           ],
                           onChanged: (v) {}),
                       SizedBox(height: 10),
@@ -61,15 +61,15 @@ var value=-1;
                           value: value,
                           items: [
                             DropdownMenuItem(
-                              child: Text("Department"),
+                              child: Text("HardWare"),
                               value: -1,
                             ),
                             DropdownMenuItem(
-                                child: Text("Department"), value: 0),
+                                child: Text("Ram"), value: 0),
                             DropdownMenuItem(
-                                child: Text("Department"), value: 1),
+                                child: Text("SSD"), value: 1),
                             DropdownMenuItem(
-                                child: Text("Department"), value: 2)
+                                child: Text("Cooling System"), value: 2)
                           ],
                           onChanged: (v) {}),
                       SizedBox(height: 10),
@@ -81,15 +81,15 @@ var value=-1;
                           value: value,
                           items: [
                             DropdownMenuItem(
-                              child: Text("Designation"),
+                              child: Text("MotherBoard"),
                               value: -1,
                             ),
                             DropdownMenuItem(
-                                child: Text("Designation"), value: 0),
+                                child: Text("Msi"), value: 0),
                             DropdownMenuItem(
-                                child: Text("Designation"), value: 1),
+                                child: Text("Gygabyte"), value: 1),
                             DropdownMenuItem(
-                                child: Text("Designation"), value: 2)
+                                child: Text("ColorFull"), value: 2)
                           ],
                           onChanged: (v) {}),
                       SizedBox(height: 10),
