@@ -9,7 +9,7 @@ class ProductListService{
   static Future<List<Products>> productListService()async{
     log("+++++++++");
     try{
-      ProductLIstModel data=await ProductLIstModel.fromJson(jsonDecode(jsonEncode(ProductList.productlist)));
+      ProductLIstModel data=ProductLIstModel.fromJson(jsonDecode(jsonEncode(ProductList.productlist)));
       log("${data.products}");
       return data.products??[];
     }
