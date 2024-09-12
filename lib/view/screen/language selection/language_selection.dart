@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/view/screen/auth/login.dart';
 import 'package:pc_mart/view/screen/home%20api%20version/home.dart';
-import 'package:pc_mart/view/screen/home02%20only%20ui%20version/home02.dart';
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({super.key});
   @override
