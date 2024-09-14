@@ -29,7 +29,7 @@ class PopScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text("Doctors"),
+          Text(""),
 
         ],
       ),

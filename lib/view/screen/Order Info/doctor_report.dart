@@ -17,7 +17,7 @@ class DoctorReport extends StatelessWidget {
         title: SizedBox(
             height: 32,
             width: 114,
-            child: Image.asset("images/splash logo.png")),
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
         actions: [
           Padding(
@@ -36,7 +36,7 @@ class DoctorReport extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text("Doctor Report",
+              Text("Order Info",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               SizedBox(
                 height: 20,
