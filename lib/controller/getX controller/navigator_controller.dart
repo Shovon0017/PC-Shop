@@ -1,6 +1,8 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pc_mart/view/screen/Profile/Profile.dart';
+import 'package:pc_mart/view/screen/cart/cart_list.dart';
 import 'package:pc_mart/view/screen/category/category.dart';
 import 'package:pc_mart/view/screen/doctorInfo/doctorInfo.dart';
 import 'package:pc_mart/view/screen/home%20api%20version/home.dart';
@@ -14,7 +16,8 @@ class BottomNavBarController extends GetxController {
 
   List<Widget> bottomBarPages = [
     Home(),
-    DoctorInfo(),
+    CartScreen(),
+    Profile()
   ];
   @override
   void onInit() {

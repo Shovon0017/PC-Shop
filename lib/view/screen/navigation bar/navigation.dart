@@ -49,23 +49,23 @@ class NavigationBarShow extends StatelessWidget {
           ),
           BottomBarItem(
             inActiveItem: Icon(
-              Icons.search,
+              Icons.shopping_cart,
               color: Colors.black,
 
             ),
             activeItem: Icon(
-              Icons.search,
+              Icons.shopping_cart,
               color: Colors.white,
             ),
             itemLabel: 'Search',
           ),
           BottomBarItem(
             inActiveItem: Icon(
-              Icons.category,
+              Icons.person,
               color: Colors.black,
             ),
             activeItem: Icon(
-              Icons.category_outlined,
+              Icons.person,
               color: Colors.white,
             ),
             itemLabel: 'Category',
