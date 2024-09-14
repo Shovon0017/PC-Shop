@@ -3,8 +3,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/controller/getX%20controller/ProductInfoController.dart';
+import 'package:pc_mart/view/screen/notification/notification.dart';
 
 
 class ProductInfo extends StatelessWidget {
@@ -16,9 +18,20 @@ class ProductInfo extends StatelessWidget {
     ProductDetailsController controller = Get.put(ProductDetailsController());
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text("Description"),
+        backgroundColor: Color(0xffFFFFFF),
+        title: SizedBox(
+            height: 32,
+            width: 114,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
+          )
+        ],
       ),
       body: Obx(()=>
           SingleChildScrollView(
