@@ -69,8 +69,14 @@ class ProductInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                CommonButton(buttonName: "Add to cart", onTap: ()async{
-                })
+                Row(
+                  children: [
+                    CommonButton(buttonName: "Add to cart", onTap: ()async{
+                    }),
+                    CommonButton(buttonName: "Buy Now", onTap: ()async{
+                    })
+                  ],
+                )
               ],
             ),
           ),
