@@ -14,7 +14,7 @@ class LogOutService extends GetxController {
     isLoading.value = false;
 
     if (message) {
-      Get.to(() =>  const Login2());
+      Get.offAll(() =>  const Login2());
       return;
     }
   }
