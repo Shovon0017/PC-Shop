@@ -15,7 +15,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     LogOutService controller=Get.put(LogOutService());
-    return Scaffold(
+    return Scaffold(backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xffFFFFFF),
         title: SizedBox(
@@ -34,7 +34,10 @@ class _ProfileState extends State<Profile> {
       ),
       body: Column(
         children: [
-          const Row(
+          Text("Profile",style: TextStyle(
+            fontWeight: FontWeight.bold,fontSize: 30
+          ),),
+           Row(
             children: [
               CircleAvatar(
                 radius: 35,backgroundImage: AssetImage("images/Shovonpic.jpg"),
@@ -53,68 +56,22 @@ class _ProfileState extends State<Profile> {
               )
             ],
           ),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(29, 58),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10))),
-              onPressed: () {
+          CommonButton(buttonName: "Requested Order", onTap: (){
 
-              },
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Requested Order",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.black,
-                  ),
-                ],
-              )),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(29, 58),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10))),
-              onPressed: () {
+          }),
+          CommonButton(buttonName: "Confirm Order", onTap: (){
 
-              },
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Confirm Order",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.black,
-                  ),
-                ],
-              )),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(29, 58),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10))),
-              onPressed: () {
-              },
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Update Profile",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.black,
-                  ),
-                ],
-              )),
+          }),
+          CommonButton(buttonName: "Order Report", onTap: (){
+
+          }),
+          CommonButton(buttonName: "Update Profile", onTap: (){
+
+          }),
+          CommonButton(buttonName: "Setting", onTap: (){
+
+          }),
+
           CommonButton(buttonName: "LogOut", onTap: (){
             controller.logOutFun();
           })
