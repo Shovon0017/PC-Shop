@@ -9,6 +9,7 @@ import 'package:pc_mart/common%20widget/common_text.dart';
 import 'package:pc_mart/common%20widget/search_field.dart';
 import 'package:pc_mart/controller/getX%20controller/ProductListController.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
+import 'package:pc_mart/view/screen/product_info/product_info.dart';
 
 
 class Home extends StatelessWidget {
@@ -64,31 +65,35 @@ class Home extends StatelessWidget {
                         crossAxisCount: 2,
                       ),
                       itemBuilder: (context, index) {
-                        return Card(
-                          elevation: 4,
-                          color: Colors.white,
-                          child: SizedBox(
-                            height: 220,
-                            width:
-                            MediaQuery.sizeOf(context).width /
-                                2.2,
-                            child: Column(
-                              crossAxisAlignment:
-                              CrossAxisAlignment.center,
-                              children: [
-                                SizedBox(
-                                height: 100,
-                                    width: 100,
-                                    child: Image(image: AssetImage("${controller.productList[index].image}"))),
-                                CommonText(
-                                    title: "ID : ${controller.productList[index].productId}"),
-                                CommonText(
-                                    title:
-                                    "Name : ${controller.productList[index].nameEn}"),
-                                CommonText(
-                                    title:
-                                    "Price : ${controller.productList[index].regPrice}Tk"),
-                              ],
+                        return InkWell(onTap: (){
+                          Get.to(()=>ProductInfo(id:index));
+                        },
+                          child: Card(
+                            elevation: 4,
+                            color: Colors.white,
+                            child: SizedBox(
+                              height: 220,
+                              width:
+                              MediaQuery.sizeOf(context).width /
+                                  2.2,
+                              child: Column(
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                  height: 100,
+                                      width: 100,
+                                      child: Image(image: AssetImage("${controller.productList[index].image}"))),
+                                  CommonText(
+                                      title: "ID : ${controller.productList[index].productId}"),
+                                  CommonText(
+                                      title:
+                                      "Name : ${controller.productList[index].nameEn}"),
+                                  CommonText(
+                                      title:
+                                      "Price : ${controller.productList[index].regPrice}Tk"),
+                                ],
+                              ),
                             ),
                           ),
                         );
