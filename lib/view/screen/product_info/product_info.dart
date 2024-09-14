@@ -22,44 +22,44 @@ class ProductInfo extends StatelessWidget {
       ),
       body: Obx(()=>
           SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  height: 230,
-                  width: 300,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10)
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:10),
+              child: Column(
+                children: [
+                  Container(
+                    height: 230,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 230,
+                          child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: controller.image.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SizedBox(
+                                    width: 120,
+                                    child: Image.asset("${controller}")
+                                  ),
+                                );
+                              }),
+                        )
+                      ],
+                    ),
                   ),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 230,
-                        child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: controller.image.length,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: SizedBox(
-                                  width: 120,
-                                  child: Image.asset("${controller}")
-                                ),
-                              );
-                            }),
-                      )
-                    ],
-                  ),
-                ),
-                Text("Stock:${controller.productDetails?.productStock}"),
-                const SizedBox(height: 20),
-                Text("Review:${controller.productDetails?.review}"),
-                const SizedBox(height: 20),
-                Text("Rating:${controller.productDetails?.rating}"),
-                const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
+                  Text("Stock:${controller.productDetails?.productStock}"),
+                  const SizedBox(height: 20),
+                  Text("Review:${controller.productDetails?.review}"),
+                  const SizedBox(height: 20),
+                  Text("Rating:${controller.productDetails?.rating}"),
+                  const SizedBox(height: 20),
+                  Container(
                     height: 200,
                     width: double.infinity,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),border:const Border.fromBorderSide(BorderSide(color: Colors.black))),
@@ -68,16 +68,23 @@ class ProductInfo extends StatelessWidget {
                       child: Text("Description:${controller.productDetails?.description?.en}",style: const TextStyle(fontSize: 16),),
                     ),
                   ),
-                ),
-                Row(
-                  children: [
-                    CommonButton(buttonName: "Add to cart", onTap: ()async{
-                    }),
-                    CommonButton(buttonName: "Buy Now", onTap: ()async{
-                    })
-                  ],
-                )
-              ],
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CommonButton(
+                        buttonWidth: 150,
+
+                          buttonName: "Buy Now", onTap: ()async{
+                      }),
+                      CommonButton(
+                        buttonWidth:150,
+
+                          buttonName: "Add to cart", onTap: ()async{
+                      })
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
       ),
