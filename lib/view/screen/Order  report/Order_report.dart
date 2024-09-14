@@ -6,8 +6,8 @@ import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/common%20widget/common_text_field.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
-class DoctorReport extends StatelessWidget {
-  const DoctorReport({super.key});
+class OrderReport extends StatelessWidget {
+  const OrderReport({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class DoctorReport extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text("Order Info",
+              Text("Order Report",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               SizedBox(
                 height: 20,

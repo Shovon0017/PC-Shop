@@ -6,8 +6,8 @@ import 'package:pc_mart/common%20widget/common_text_field.dart';
 import 'package:pc_mart/view/screen/Appoinment/AppointmentInfo.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 
-class DoctorInfo extends StatelessWidget {
-   DoctorInfo({super.key});
+class OrderInfo extends StatelessWidget {
+   OrderInfo({super.key});
   var value=-1;
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:pc_mart/view/screen/Profile/Profile.dart';
 import 'package:pc_mart/view/screen/cart/cart_list.dart';
 import 'package:pc_mart/view/screen/category/category.dart';
-import 'package:pc_mart/view/screen/doctorInfo/doctorInfo.dart';
 import 'package:pc_mart/view/screen/home%20api%20version/home.dart';
 class BottomNavBarController extends GetxController {
   final pageController = PageController(initialPage: 0);
