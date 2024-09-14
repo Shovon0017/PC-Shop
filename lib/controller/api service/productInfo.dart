@@ -2,16 +2,18 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:pc_mart/Model/productInfoModel.dart';
 import 'package:pc_mart/Model/productListModel.dart';
+import 'package:pc_mart/database/productInfo.dart';
 import 'package:pc_mart/database/productList.dart';
 
-class ProductInfo{
-  static Future<List<Products>> productInfo({required int id})async{
+class ProductInfoService{
+  static Future<Object> productInfoService({required int id})async{
     log("+++++++++");
     try{
-      ProductLIstModel allproduct=ProductLIstModel.fromJson(jsonDecode(jsonEncode(ProductList.productlist)));
-      log("${allproduct.products}");
-      return allproduct.products??[];
+      ProductInfoModel allproduct=ProductInfoModel.fromJson(jsonDecode(jsonEncode(ProductInfoData.productInfoData)));
+      log("${allproduct.productDetails}");
+      return allproduct.productDetails??[];
     }
     catch(e){
       log("error:$e");
