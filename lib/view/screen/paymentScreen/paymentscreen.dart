@@ -18,7 +18,7 @@ class PaymentScreen extends StatelessWidget {
         title: SizedBox(
             height: 32,
             width: 114,
-            child: Image.asset("images/splash logo.png")),
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
         actions: [
           Padding(

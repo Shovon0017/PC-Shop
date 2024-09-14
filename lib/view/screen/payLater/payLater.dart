@@ -16,7 +16,7 @@ class Paylater extends StatelessWidget {
         title: SizedBox(
             height: 32,
             width: 114,
-            child: Image.asset("images/splash logo.png")),
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
         actions: [
           Padding(
@@ -30,13 +30,13 @@ class Paylater extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("Appointment Form",
+            Text("Order Form",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
             SizedBox(
               height: 50,
             ),
             Text(
-              "Appointment Successfully Created",
+              "Order Successfully Created",
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
