@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pc_mart/common%20widget/CommonIcon.dart';
+import 'package:pc_mart/view/screen/notification/notification.dart';
 
 class Order extends StatefulWidget {
   const Order({super.key});
@@ -10,13 +13,33 @@ class Order extends StatefulWidget {
 class _OrderState extends State<Order> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
+    return Scaffold(backgroundColor: Color(0xffFFFFFF),
+
       appBar: AppBar(
-        title: const Text("Request Order"),
+        backgroundColor: Color(0xffFFFFFF),
+        title: SizedBox(
+            height: 32,
+            width: 114,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
+          )
+        ],
       ),
-      body: Center(child: Image.asset("images/Screenshot 2024-08-14 174528.png")),
+      body: Column(
+        children: [
+          Text("Requested Order",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+          SizedBox(
+            height: 100,
+          ),
+          Image.asset("images/no-product-found.png"),
+        ],
+      ),
     );
   }
 }

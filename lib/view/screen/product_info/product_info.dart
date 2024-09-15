@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/controller/getX%20controller/ProductInfoController.dart';
+import 'package:pc_mart/view/screen/OrderInfo/OrderInfo.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 
 
@@ -88,6 +89,7 @@ class ProductInfo extends StatelessWidget {
                         buttonWidth: 150,
 
                           buttonName: "Buy Now", onTap: ()async{
+                          Get.to(()=>OrderInfo());
                       }),
                       CommonButton(
                         buttonWidth:150,

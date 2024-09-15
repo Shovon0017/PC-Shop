@@ -41,7 +41,7 @@ class OrderReport extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              CommonTextField(Controller: TextEditingController(), hinText: "Type Your Phone Number", icon: null, color: Colors.grey),
+              CommonTextField(Controller: TextEditingController(), hinText: "Type Your Order Number", icon: null, color: Colors.grey),
               SizedBox(
                 height: 10,
               ),

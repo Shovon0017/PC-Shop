@@ -35,7 +35,7 @@ class OrderInfo extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Doctor Info",
+                "Order Info",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
               Image.asset("images/doctor images01.png"),

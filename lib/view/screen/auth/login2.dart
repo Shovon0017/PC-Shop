@@ -62,7 +62,7 @@ class _Login2State extends State<Login2> {
                 ),
                 const SizedBox(height: 30),
                 CommonButton(buttonName: "Sign In", onTap: () {
-                  Get.to(()=>NavigationBarShow());
+                  Get.offAll(()=>NavigationBarShow());
                 })
               ],
             ),
