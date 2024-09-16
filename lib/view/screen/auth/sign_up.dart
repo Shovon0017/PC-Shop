@@ -34,7 +34,7 @@ class SignUp extends StatelessWidget {
                     SizedBox(
                         height: 200,
                         width: 200,
-                        child: Image.asset("sign up.jpg")),
+                        child: Image.asset("images/sign up.jpg")),
                     EmailTextField(
                       emailController: signupController.emailController,
                     ),

@@ -20,8 +20,14 @@ class SignInController extends GetxController {
 
     if (message) {
       log("Next Page");
-      Get.to(() =>  NavigationBarShow());
+      Get.offAll(() =>  NavigationBarShow());
       return;
     }
+  }
+  @override
+  void onInit() {
+    emailController.text="Shovon@gmail.com";
+    passwordController.text="12345678";
+    super.onInit();
   }
 }

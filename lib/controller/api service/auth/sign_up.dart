@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SignUpService {
   static Future<bool> signUpService({
     required String email,
-    required String name,
+    required String phone,
     required String password,
     required String password_confirmation
   }) async {

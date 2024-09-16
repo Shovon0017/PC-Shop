@@ -21,10 +21,7 @@ class Home extends StatelessWidget {
     return Scaffold( backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xffFFFFFF),
-        title: SizedBox(
-            height: 40,
-            width: 150,
-            child: Image.asset("images/pcmart.jpg")),
+        title:Text("All Products"),
         centerTitle: true,
         actions: [
           Padding(
