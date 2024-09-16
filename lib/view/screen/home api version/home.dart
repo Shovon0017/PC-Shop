@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
     return Scaffold( backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xffFFFFFF),
-        title:Text("All Products"),
+        title:Text("All Products",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: [
           Padding(
