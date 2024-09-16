@@ -29,7 +29,7 @@ var value=-1;
               Get.defaultDialog(
                   title: "Filter",
                   titleStyle: TextStyle(
-                      color: Colors.blue, fontWeight: FontWeight.bold),
+                      color:Color(0xff9a0000), fontWeight: FontWeight.bold),
                   content: Column(
                     children: [
                       DropdownButtonFormField(
@@ -98,7 +98,7 @@ var value=-1;
                     ],
                   ));
             },
-            child: Card(color:Colors.blue,child: Icon(Icons.search,color: Colors.white,)))
+            child: Card(color:Color(0xff9a0000),child: Icon(Icons.search,color: Colors.white,)))
       ),
     );
   }

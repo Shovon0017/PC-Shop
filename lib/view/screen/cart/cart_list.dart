@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/controller/getX%20controller/cart_show_controller.dart';
+import 'package:pc_mart/view/screen/notification/notification.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -16,11 +18,20 @@ class _CartScreenState extends State<CartScreen> {
     ShowCartProductsController controller = Get.put(ShowCartProductsController());
     return Scaffold(backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: const Text(
-            "Cart",
-          ),
+          backgroundColor: Color(0xffFFFFFF),
+          title: SizedBox(
+              height: 32,
+              width: 114,
+              child: Image.asset("images/pcmart.jpg")),
           centerTitle: true,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: CommonIconButton(onTap: (){
+                Get.to(()=>NotificationShow());
+              }),
+            )
+          ],
         ),
         body: Obx(
               () => controller.isLoading.isTrue

@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/controller/api%20service/auth/sign_up.dart';
-import 'package:pc_mart/view/screen/auth/login2.dart';
+import 'package:pc_mart/view/screen/auth/SignIn.dart';
 class SignUpController extends GetxController{
 
   TextEditingController emailController = TextEditingController();
@@ -26,7 +26,7 @@ class SignUpController extends GetxController{
     isLoading.value=false;
     if(status){
       log("Next Page");
-      Get.to(()=>const Login2());
+      Get.to(()=>const SignIn());
     }
     else{
       Get.snackbar("", "The email has already been taken");

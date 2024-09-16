@@ -64,7 +64,7 @@ class Paylater extends StatelessWidget {
               buttonWidth:100,
                 buttonColor: Color(0xff9a0000),
                 buttonName: "OK", onTap: (){
-              Get.to(()=>NavigationBarShow());
+              Get.offAll(()=>NavigationBarShow());
             })
           ],
         ),

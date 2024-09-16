@@ -25,7 +25,7 @@ class NavigationBarShow extends StatelessWidget {
         maxLine: 1,
         shadowElevation:10,
         kBottomRadius: 28.0,
-        notchColor: Colors.blue,
+        notchColor: Color(0xff9a0000),
         removeMargins: false,
         bottomBarHeight: 80,
         bottomBarWidth: 500,
@@ -57,7 +57,7 @@ class NavigationBarShow extends StatelessWidget {
               Icons.shopping_cart,
               color: Colors.white,
             ),
-            itemLabel: 'Search',
+            itemLabel: 'Cart',
           ),
           BottomBarItem(
             inActiveItem: Icon(

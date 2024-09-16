@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
             SearchField(
               onChanged: (String text ) {
                 log("===== onChanged : $text ==================");
-                // controller.searchFunction(searchText: text);
+                 controller.searchFunction(searchText: text);
               },
             ),
             const SizedBox(height: 10),

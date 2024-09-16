@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
-import 'package:pc_mart/view/screen/auth/login.dart';
+import 'package:pc_mart/view/screen/auth/SignIn.dart';
 import 'package:pc_mart/view/screen/home%20api%20version/home.dart';
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({super.key});
@@ -22,7 +22,8 @@ class LanguageSelection extends StatelessWidget {
               }),
               CommonButton(buttonColor:Color(0xff9a0000) ,
                   buttonName: "English", onTap: (){
-                Get.to(()=>Login());
+                Get.to(()=>SignIn(
+                ));
               })
             ],
           ),

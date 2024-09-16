@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
-import 'package:pc_mart/view/screen/auth/login2.dart';
+import 'package:pc_mart/view/screen/auth/SignIn.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 
 class Create extends StatefulWidget {
@@ -77,7 +77,7 @@ class _CreateState extends State<Create> {
                   title: Text("By proceeding, you agree to zdrop’s Privacy and Policy",style: TextStyle(fontSize: 13),),
                 ),
                 CommonButton(buttonName: "Sign Up", onTap: (){
-                  Get.to(()=>Login2());
+                  Get.to(()=>SignIn());
                 })
               ],
             ),
