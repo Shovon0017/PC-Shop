@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                       ),
                       itemBuilder: (context, index) {
                         return InkWell(onTap: (){
-                          Get.to(()=>ProductInfo(id:index));
+                          Get.to(()=>ProductInfo(id:index, productData: controller.productList[index]));
                         },
                           child: Card(
                             elevation: 4,

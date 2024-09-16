@@ -40,8 +40,8 @@ class PaymentScreen extends StatelessWidget {
               height: 30,
             ),
             CommonButton(
-                buttonColor: Colors.blue,
-                buttonName: "Payment Ok", onTap: (){
+                buttonColor: Color(0xff9a0000),
+                buttonName: "Payment Done", onTap: (){
                   Get.offAll(()=>NavigationBarShow());
             })
           ],

@@ -43,7 +43,6 @@ class Paylater extends StatelessWidget {
                   color: Colors.green),
             ),
             SizedBox(
-              height: 150,
               width: double.infinity,
               child: Card(
                 elevation: 3,
@@ -52,8 +51,7 @@ class Paylater extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal:10),
                   child: Container(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Dear Sir, Amirul Islam Amir Comfirmed your Appointment wirh Assoc. Prof. Dr. Khandker Parvez Ahmed. SL: 5 Room: 801 (Level-8) Date: 28-08-2024. Delta Health Care, Mymensingh Ltd. Address: 55/5, Medical College Gate, Charpara, Mymensingh."),
-                   Text(" http://cmadical.com/appoinmenrt/aavbgfjhs45",style: TextStyle(color: Colors.blue),),
+                      Center(child: Text("Complete Your Payment In 30 Minute",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
                     ],
                   )),
                 ),
@@ -63,10 +61,9 @@ class Paylater extends StatelessWidget {
               height: 30,
             ),
             CommonButton(
-                buttonColor: Colors.blue,
-                buttonWidth: 100,
-                buttonHeight: 30,
-                buttonName: "Complete", onTap: (){
+              buttonWidth:100,
+                buttonColor: Color(0xff9a0000),
+                buttonName: "OK", onTap: (){
               Get.to(()=>NavigationBarShow());
             })
           ],

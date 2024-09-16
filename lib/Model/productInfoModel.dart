@@ -1,9 +1,9 @@
-class ProductInfoModel {
+class ProductDescriptionModel {
   ProductDetails? productDetails;
 
-  ProductInfoModel({this.productDetails});
+  ProductDescriptionModel({this.productDetails});
 
-  ProductInfoModel.fromJson(Map<String, dynamic> json) {
+  ProductDescriptionModel.fromJson(Map<String, dynamic> json) {
     productDetails = json['product_details'] != null
         ? ProductDetails.fromJson(json['product_details'])
         : null;
