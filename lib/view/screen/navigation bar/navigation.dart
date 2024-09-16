@@ -32,7 +32,7 @@ class NavigationBarShow extends StatelessWidget {
         showShadow: true,
         durationInMilliSeconds: 300,
         itemLabelStyle:
-        const TextStyle(fontSize: 10, color: Colors.black),
+        const TextStyle(fontSize: 10, color: Colors.white),
         elevation: 1,
         bottomBarItems: const [
           BottomBarItem(
@@ -50,7 +50,7 @@ class NavigationBarShow extends StatelessWidget {
           BottomBarItem(
             inActiveItem: Icon(
               Icons.shopping_cart,
-              color: Colors.black,
+              color: Colors.white,
 
             ),
             activeItem: Icon(
@@ -62,7 +62,7 @@ class NavigationBarShow extends StatelessWidget {
           BottomBarItem(
             inActiveItem: Icon(
               Icons.person,
-              color: Colors.black,
+              color: Colors.white,
             ),
             activeItem: Icon(
               Icons.person,
