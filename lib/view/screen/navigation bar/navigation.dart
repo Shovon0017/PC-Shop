@@ -68,7 +68,7 @@ class NavigationBarShow extends StatelessWidget {
               Icons.person,
               color: Colors.white,
             ),
-            itemLabel: 'Category',
+            itemLabel: 'Profile',
           ),
         ],
         onTap: (index) {
