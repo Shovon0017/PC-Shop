@@ -41,7 +41,7 @@ class NavigationBarShow extends StatelessWidget {
               color: Colors.white,
             ),
             activeItem: Icon(
-              Icons.home_outlined,
+              Icons.home_outlined,size: 30,
               color:Color(0xff9a0000),
 
             ),
