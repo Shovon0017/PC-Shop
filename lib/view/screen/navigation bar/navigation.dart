@@ -38,7 +38,7 @@ class NavigationBarShow extends StatelessWidget {
           BottomBarItem(
             inActiveItem: Icon(
               Icons.home_outlined,
-              color: Colors.black,
+              color: Colors.white,
             ),
             activeItem: Icon(
               Icons.home_outlined,
