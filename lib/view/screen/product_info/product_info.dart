@@ -80,27 +80,13 @@ class ProductInfo extends StatelessWidget {
                     CommonButton(
                       buttonWidth: 150,
                         buttonColor: Color(0xff9a0000),
-                        buttonName: "Confirm Order",
+                        buttonName: "Buy Now",
                         onTap: () {
                           Get.dialog(AlertDialog(
                               title: Text("Order Info",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue)),
                               content: SingleChildScrollView(
                                 child: Column(
                                   children: [
-                                    CommonTextField(
-                                      Controller:
-                                      TextEditingController(),
-                                      hinText: "Customer Name",
-                                      icon: null, color: null,
-                                    ),
-                                    SizedBox(height: 10),
-                                    CommonTextField(
-                                      Controller:
-                                      TextEditingController(),
-                                      hinText: "Customer Mobile Number",
-                                      icon: null, color: null,
-                                    ),
-                                    SizedBox(height: 10),
                                     DropdownButtonFormField(
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
@@ -109,13 +95,13 @@ class ProductInfo extends StatelessWidget {
                                         value: value,
                                         items: [
                                           DropdownMenuItem(
-                                            child: Text("Gender"),
+                                            child: Text("Product Selection"),
                                             value: -1,
                                           ),
                                           DropdownMenuItem(
-                                              child: Text("Male"), value: 0),
+                                              child: Text("Type-1"), value: 0),
                                           DropdownMenuItem(
-                                              child: Text("Female"), value: 1),
+                                              child: Text("Type-2"), value: 1),
                                         ],
                                         onChanged: (v) {}),
                                     SizedBox(height: 10),
@@ -136,6 +122,26 @@ class ProductInfo extends StatelessWidget {
                                               child: Text("5 piece"), value: 1),
                                           DropdownMenuItem(
                                               child: Text("10 piece"), value: 2)
+                                        ],
+                                        onChanged: (v) {}),
+                                    SizedBox(height: 10),
+                                    DropdownButtonFormField(
+                                        decoration: InputDecoration(
+                                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                                borderSide:
+                                                BorderSide(color: Colors.black))),
+                                        value: value,
+                                        items: [
+                                          DropdownMenuItem(
+                                            child: Text("Choose Color"),
+                                            value: -1,
+                                          ),
+                                          DropdownMenuItem(
+                                              child: Text("Blue"), value: 0),
+                                          DropdownMenuItem(
+                                              child: Text("Green"), value: 1),
+                                          DropdownMenuItem(
+                                              child: Text("Red"), value: 2)
                                         ],
                                         onChanged: (v) {}),
                                     SizedBox(height: 10),

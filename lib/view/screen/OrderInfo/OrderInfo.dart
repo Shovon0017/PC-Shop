@@ -75,10 +75,23 @@ class OrderInfo extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
                 TextSpan(
-                    text: "599.99 Tk",
+                    text: "599.99Tk",
                     style: TextStyle(fontSize: 15, color: Colors.black))
               ])),
             SizedBox(height: 10),
+              RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                        text: "Delivery Charge:",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black)),
+                    TextSpan(
+                        text: "60Tk",
+                        style: TextStyle(fontSize: 15, color: Colors.black))
+                  ])),
+              SizedBox(height: 10),
               RichText(
                   text: TextSpan(children: [
                     TextSpan(

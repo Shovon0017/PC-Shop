@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/common%20widget/common_loading_button.dart';
 import 'package:pc_mart/controller/getX%20controller/sign_up.dart';
-import 'package:pc_mart/view/screen/auth/widget/auth%20%20widget/confirm_password.dart';
 import 'package:pc_mart/view/screen/auth/widget/auth%20%20widget/email_text_field.dart';
 import 'package:pc_mart/view/screen/auth/widget/auth%20%20widget/phone.dart';
 import 'package:pc_mart/view/screen/auth/widget/confirm_password.dart';
@@ -46,8 +45,8 @@ class SignUp extends StatelessWidget {
                       passController: signupController.passController,
                     ),
                     buildSizedBox(height: 10),
-                    ConfirmPasswordTextField(
-                        confirmPassController: signupController.confirmPassController),
+                    PasswordTextField(
+                        passController: signupController.confirmPassController,),
                     buildSizedBox(height: 30),
 
                     Obx(() => signupController.isLoading.isFalse
