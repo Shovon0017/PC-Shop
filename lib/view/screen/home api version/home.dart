@@ -40,7 +40,6 @@ class Home extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-               Text("All Products",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                SizedBox(
                 height: 30,
               ),
@@ -56,10 +55,24 @@ class Home extends StatelessWidget {
               CarouselSlider(items: [
                 Container(
                   margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pc accesories.webp')),borderRadius: BorderRadius.circular(15)),
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pc accesories.webp'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pc accesories.webp'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pc accesories.webp'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
                 )
 
-              ], options: CarouselOptions()),
+              ], options: CarouselOptions(
+                height: 180,
+                aspectRatio: 16/9,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                enlargeCenterPage: true
+              )),
               const SizedBox(height: 10),
               Obx(() => controller.isLoading.isTrue
                   ? const Center(child: CircularProgressIndicator())
