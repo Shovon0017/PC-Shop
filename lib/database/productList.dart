@@ -123,6 +123,119 @@ class ProductList{
           "buttons": 6,
           "battery_life": "60 hours"
         }
+      },
+      {
+        "id": "9",
+        "name": "NVIDIA GeForce RTX 4080",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Graphics Card",
+        "brand": "NVIDIA",
+        "price": 1199.99,
+        "stock": 18,
+        "specs": {
+          "memory": "16GB GDDR6X",
+          "coreClock": "2505 MHz",
+          "interface": "PCIe 4.0"
+        }
+      },
+      {
+        "id": "10",
+        "name": "AMD Ryzen 9 7950X",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Processor",
+        "brand": "AMD",
+        "price": 699.99,
+        "stock": 18,
+        "specs": {
+          "cores": "16",
+          "threads": "32",
+          "baseClock": "4.2 GHz",
+          "boostClock": "5.7 GHz"
+        }
+      },
+      {
+        "id": "11",
+        "name": "Corsair Vengeance LPX 32GB",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Memory",
+        "brand": "Corsair",
+        "price": 139.99,
+        "stock": 18,
+        "specs": {
+          "type": "DDR4",
+          "speed": "3200 MHz",
+          "casLatency": "16"
+        }
+      },
+      {
+        "id": "12",
+        "name": "Samsung 980 PRO 1TB",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Storage",
+        "brand": "Samsung",
+        "price": 159.99,
+        "stock": 18,
+        "specs": {
+          "type": "NVMe M.2",
+          "readSpeed": "7000 MB/s",
+          "writeSpeed": "5000 MB/s"
+        }
+      },
+      {
+        "id": "13",
+        "name": "ASUS ROG Crosshair VIII Hero",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Motherboard",
+        "brand": "ASUS",
+        "price": 349.99,
+        "stock": 18,
+        "specs": {
+          "socket": "AM4",
+          "chipset": "AMD X570",
+          "memorySupport": "DDR4 4400 MHz"
+        }
+      },
+      {
+        "id": "14",
+        "name": "Noctua NH-U12S",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Cooler",
+        "brand": "Noctua",
+        "price": 69.95,
+        "stock": 18,
+        "specs": {
+          "type": "Air Cooler",
+          "fanSize": "120mm",
+          "compatibleSockets": ["Intel LGA115x", "AMD AM4"]
+        }
+      },
+      {
+        "id": "15",
+        "name": "Fractal Design Meshify C",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Case",
+        "brand": "Fractal Design",
+        "price": 99.99,
+        "stock": 18,
+        "specs": {
+          "formFactor": "Mid Tower",
+          "color": "Black",
+          "frontFans": "2 x 120mm"
+        }
+      },
+      {
+        "id": "16",
+        "name": "EVGA SuperNOVA 850 G5",
+        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "category": "Power Supply",
+        "brand": "EVGA",
+        "price": 149.99,
+        "stock": 18,
+        "specs": {
+          "wattage": "850W",
+          "efficiencyRating": "80+ Gold",
+          "modular": "Fully Modular"
+        }
       }
     ]
   };

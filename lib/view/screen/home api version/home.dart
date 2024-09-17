@@ -60,13 +60,21 @@ class Home extends StatelessWidget {
                     decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/COMPUTER MONITORS.png'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage(''),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                InkWell(onTap: (){
+
+                },
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/PC ACCESSORIES (1).png'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                  ),
                 ),
-                Container(
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/PC PARTS.png'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                InkWell(onTap: (){
+
+                },
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/PC PARTS.png'),fit: BoxFit.cover),borderRadius: BorderRadius.circular(15)),
+                  ),
                 )
 
               ], options: CarouselOptions(
