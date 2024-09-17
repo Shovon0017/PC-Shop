@@ -12,9 +12,9 @@ class PaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xffFFFFFF),
+    return Scaffold(backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32,
             width: 114,
@@ -24,7 +24,7 @@ class PaymentScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+              Get.to(()=>const NotificationShow());
             }),
           )
         ],
@@ -35,14 +35,14 @@ class PaymentScreen extends StatelessWidget {
             SizedBox(
 
                 child: Image.asset("images/payment.gif",fit: BoxFit.fill,)),
-            Text("Payment Gateway",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-            SizedBox(
+            const Text("Payment Gateway",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+            const SizedBox(
               height: 30,
             ),
             CommonButton(
-                buttonColor: Color(0xff9a0000),
+                buttonColor: const Color(0xff9a0000),
                 buttonName: "Payment Done", onTap: (){
-                  Get.offAll(()=>NavigationBarShow());
+                  Get.offAll(()=>const NavigationBarShow());
             })
           ],
         ),

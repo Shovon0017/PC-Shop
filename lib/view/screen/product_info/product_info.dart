@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:pc_mart/Model/productListModel.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
-import 'package:pc_mart/common%20widget/common_text_field.dart';
 import 'package:pc_mart/controller/getX%20controller/product_description.dart';
 import 'package:pc_mart/view/screen/OrderInfo/OrderInfo.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
@@ -23,7 +22,7 @@ class ProductInfo extends StatelessWidget {
     controller.productAmount.value = double.parse(productData.regPrice.toString());
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32,
             width: 114,
@@ -33,7 +32,7 @@ class ProductInfo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+              Get.to(()=>const NotificationShow());
             }),
           )
         ],
@@ -58,7 +57,7 @@ class ProductInfo extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                Text("Rating:${productData.nameEn}"),
                 const SizedBox(height: 10),
                 Text("Brand:${productData.brand}"),
@@ -69,9 +68,9 @@ class ProductInfo extends StatelessWidget {
                   height: 200,
                   width: double.infinity,
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),border:const Border.fromBorderSide(BorderSide(color: Colors.black))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Description:Welcome to Our Supershop! Discover a wide range of quality products at unbeatable prices. From fresh groceries and household essentials to the latest gadgets and fashion, we have everything you need in one place. Enjoy the convenience of shopping from home and paying securely with cash on delivery.",style: const TextStyle(fontSize: 16),),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Description:Welcome to Our Supershop! Discover a wide range of quality products at unbeatable prices. From fresh groceries and household essentials to the latest gadgets and fashion, we have everything you need in one place. Enjoy the convenience of shopping from home and paying securely with cash on delivery.",style: TextStyle(fontSize: 16),),
                   ),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,11 +78,11 @@ class ProductInfo extends StatelessWidget {
                   children: [
                     CommonButton(
                       buttonWidth: 150,
-                        buttonColor: Color(0xff9a0000),
+                        buttonColor: const Color(0xff9a0000),
                         buttonName: "Buy Now",
                         onTap: () {
                           Get.dialog(AlertDialog(
-                              title: Text("Order Info",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue)),
+                              title: const Text("Order Info",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue)),
                               content: SingleChildScrollView(
                                 child: Column(
                                   children: [
@@ -91,65 +90,73 @@ class ProductInfo extends StatelessWidget {
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                                 borderSide:
-                                                BorderSide(color: Colors.black))),
+                                                const BorderSide(color: Colors.black))),
                                         value: value,
-                                        items: [
+                                        items: const [
                                           DropdownMenuItem(
+                                            value: -1,
                                             child: Text("Product Selection"),
-                                            value: -1,
                                           ),
                                           DropdownMenuItem(
-                                              child: Text("Type-1"), value: 0),
+                                              value: 0,
+                                              child: Text("Type-1")),
                                           DropdownMenuItem(
-                                              child: Text("Type-2"), value: 1),
+                                              value: 1,
+                                              child: Text("Type-2")),
                                         ],
                                         onChanged: (v) {}),
-                                    SizedBox(height: 10),
+                                    const SizedBox(height: 10),
                                     DropdownButtonFormField(
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                                 borderSide:
-                                                BorderSide(color: Colors.black))),
+                                                const BorderSide(color: Colors.black))),
                                         value: value,
-                                        items: [
+                                        items: const [
                                           DropdownMenuItem(
+                                            value: -1,
                                             child: Text("Choose quantity"),
-                                            value: -1,
                                           ),
                                           DropdownMenuItem(
-                                              child: Text("1 piece"), value: 0),
+                                              value: 0,
+                                              child: Text("1 piece")),
                                           DropdownMenuItem(
-                                              child: Text("5 piece"), value: 1),
+                                              value: 1,
+                                              child: Text("5 piece")),
                                           DropdownMenuItem(
-                                              child: Text("10 piece"), value: 2)
+                                              value: 2,
+                                              child: Text("10 piece"))
                                         ],
                                         onChanged: (v) {}),
-                                    SizedBox(height: 10),
+                                    const SizedBox(height: 10),
                                     DropdownButtonFormField(
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                                 borderSide:
-                                                BorderSide(color: Colors.black))),
+                                                const BorderSide(color: Colors.black))),
                                         value: value,
-                                        items: [
+                                        items: const [
                                           DropdownMenuItem(
-                                            child: Text("Choose Color"),
                                             value: -1,
+                                            child: Text("Choose Color"),
                                           ),
                                           DropdownMenuItem(
-                                              child: Text("Blue"), value: 0),
+                                              value: 0,
+                                              child: Text("Blue")),
                                           DropdownMenuItem(
-                                              child: Text("Green"), value: 1),
+                                              value: 1,
+                                              child: Text("Green")),
                                           DropdownMenuItem(
-                                              child: Text("Red"), value: 2)
+                                              value: 2,
+                                              child: Text("Red"))
                                         ],
                                         onChanged: (v) {}),
-                                    SizedBox(height: 10),
+                                    const SizedBox(height: 10),
                                     CommonButton(
                                       buttonWidth: 150,
-                                        buttonColor:Color(0xff9a0000),
+                                        buttonColor:const Color(0xff9a0000),
                                         buttonName: "Confirm Order", onTap:(){
-                                      Get.to(()=>OrderInfo());
+                                      Get.to(()=>const OrderInfo());
                                     })
                                   ],
                                 ),
@@ -160,6 +167,7 @@ class ProductInfo extends StatelessWidget {
                       buttonWidth:150,
 
                         buttonName: "Add to cart", onTap: ()async{
+                        Get.back();
                     })
                   ],
                 )

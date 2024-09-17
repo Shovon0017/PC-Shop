@@ -10,9 +10,9 @@ class Paylater extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xffFFFFFF),
+    return Scaffold(backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32,
             width: 114,
@@ -22,7 +22,7 @@ class Paylater extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+              Get.to(()=>const NotificationShow());
             }),
           )
         ],
@@ -30,12 +30,12 @@ class Paylater extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("Order Form",
+            const Text("Order Form",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            Text(
+            const Text(
               "Order Successfully Created",
               style: TextStyle(
                   fontSize: 20,
@@ -49,7 +49,7 @@ class Paylater extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal:10),
-                  child: Container(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Container(child: const Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Center(child: Text("Complete Your Payment In 30 Minute",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
                     ],
@@ -57,14 +57,14 @@ class Paylater extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             CommonButton(
               buttonWidth:100,
-                buttonColor: Color(0xff9a0000),
+                buttonColor: const Color(0xff9a0000),
                 buttonName: "OK", onTap: (){
-              Get.offAll(()=>NavigationBarShow());
+              Get.offAll(()=>const NavigationBarShow());
             })
           ],
         ),

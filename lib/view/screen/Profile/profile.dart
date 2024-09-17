@@ -5,6 +5,7 @@ import 'package:pc_mart/common%20widget/common_button.dart';
 import 'package:pc_mart/controller/getX%20controller/logout.dart';
 import 'package:pc_mart/view/screen/FAQ/FAQ.dart';
 import 'package:pc_mart/view/screen/Order%20%20report/Order_report.dart';
+import 'package:pc_mart/view/screen/confirmOrder/confirmOrder.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 import 'package:pc_mart/view/screen/requested_order/requested_order.dart';
 import 'package:pc_mart/view/screen/setting/setting.dart';
@@ -22,9 +23,9 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     LogOutService controller = Get.put(LogOutService());
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32, width: 114, child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
@@ -32,7 +33,7 @@ class _ProfileState extends State<Profile> {
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: () {
-              Get.to(() => NotificationShow());
+              Get.to(() => const NotificationShow());
             }),
           )
         ],
@@ -42,7 +43,7 @@ class _ProfileState extends State<Profile> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Profile",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
@@ -51,7 +52,7 @@ class _ProfileState extends State<Profile> {
                 width: double.infinity,
                 child: Card(
                   elevation: 5,
-                  color: Color(0xff9a0000),
+                  color: const Color(0xff9a0000),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -64,7 +65,7 @@ class _ProfileState extends State<Profile> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Name:Md Shimanto Mostofa",
                             style: TextStyle(
                               overflow: TextOverflow.ellipsis,
@@ -73,7 +74,7 @@ class _ProfileState extends State<Profile> {
                                 fontWeight: FontWeight.bold),
                           ),
                           RichText(
-                              text: TextSpan(children: [
+                              text: const TextSpan(children: [
                             TextSpan(
                                 text: "Email:",
                                 style: TextStyle(
@@ -86,7 +87,7 @@ class _ProfileState extends State<Profile> {
                                     TextStyle(color: Colors.white, fontSize: 15))
                           ])),
                           RichText(
-                              text: TextSpan(children: [
+                              text: const TextSpan(children: [
                             TextSpan(
                                 text: "Phone:",
                                 style: TextStyle(
@@ -98,7 +99,7 @@ class _ProfileState extends State<Profile> {
                                 style:
                                     TextStyle(color: Colors.white, fontSize: 15))
                           ])),
-                          RichText(text: TextSpan(
+                          RichText(text: const TextSpan(
                               children: [
                                 TextSpan(text: "Address:",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white)),
                                 TextSpan(text: "Sector-12,Uttara,Dhaka",style: TextStyle(color: Colors.white,fontSize: 15))
@@ -110,25 +111,26 @@ class _ProfileState extends State<Profile> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              CommonButton(buttonName: "Update Profile", onTap: () {}),
               CommonButton(buttonName: "Requested Order", onTap: () {
-                Get.to(()=>Order());
+                Get.to(()=>const Order());
               }),
-              CommonButton(buttonName: "Confirm Order", onTap: () {}),
+              CommonButton(buttonName: "Confirm Order", onTap: () {
+                Get.to(()=>const ConfirmOrder());
+              }),
               CommonButton(buttonName: "Order Report", onTap: () {
-                Get.to(()=>OrderReport());
+                Get.to(()=>const OrderReport());
               }),
               CommonButton(buttonName: "Setting", onTap: () {
-                Get.to(()=>Setting());
+                Get.to(()=>const Setting());
               }),
               CommonButton(buttonName: "Support", onTap: () {
-                Get.to(()=>Support());
+                Get.to(()=>const Support());
               }),
               CommonButton(buttonName: "FAQ", onTap: () {
-                Get.to(()=>FAQ());
+                Get.to(()=>const FAQ());
               }),
               CommonButton(
                   buttonName: "LogOut",

@@ -2,7 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/controller/api%20service/auth/forget_password_api.dart';
-import 'package:pc_mart/controller/api%20service/auth/otpApi.dart';
 class ForgetPasswordController extends GetxController {
   TextEditingController phoneController = TextEditingController();
   RxBool isLoading = false.obs;

@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +13,7 @@ class LogOutService extends GetxController {
     isLoading.value = false;
 
     if (message) {
-      Get.offAll(() =>   SignIn());
+      Get.offAll(() =>   const SignIn());
       return;
     }
   }

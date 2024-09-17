@@ -19,7 +19,7 @@ class SignIn extends StatelessWidget {
     Get.put(SignInService());
     SignInController signInController = Get.put(SignInController());
     return Scaffold(
-      backgroundColor:Color(0xffFFFFFF),
+      backgroundColor:const Color(0xffFFFFFF),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(

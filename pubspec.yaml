@@ -39,10 +39,19 @@ dependencies:
   get: ^4.6.6
   flutter_secure_storage: ^9.2.2
   http: ^1.2.2
+  flutter_sslcommerz: ^2.3.6
+  fluttertoast: ^8.2.8
+  flutter_easyloading: ^3.0.5
+  shimmer: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+flutter_launcher_icons:
+  android: true
+  image_path: "images/official logo.png"
+  min_sdk_android: 21
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

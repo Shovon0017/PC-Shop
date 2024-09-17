@@ -18,16 +18,19 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HomeController controller=Get.put(HomeController());
-    return Scaffold( backgroundColor: Color(0xffFFFFFF),
+    return Scaffold( backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
-        title:Text("All Products",style: TextStyle(fontWeight: FontWeight.bold),),
+        backgroundColor: const Color(0xffFFFFFF),
+        title: SizedBox(
+            height: 40,
+            width: 150,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+              Get.to(()=>const NotificationShow());
             }),
           )
         ],
@@ -36,6 +39,10 @@ class Home extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            const Text("All Products",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+            const SizedBox(
+              height: 30,
+            ),
             SearchField(
               onChanged: (String text ) {
                 log("===== onChanged : $text ==================");
@@ -54,11 +61,11 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     GridView.builder(
-                      physics:PageScrollPhysics(),
+                      physics:const PageScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: controller.productList.length,
                       gridDelegate:
-                       SliverGridDelegateWithFixedCrossAxisCount(
+                       const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                       ),
                       itemBuilder: (context, index) {

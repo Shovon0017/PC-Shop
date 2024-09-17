@@ -15,20 +15,20 @@ var value=-1;
       onChanged: onChanged,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-            borderSide:  BorderSide(color: Colors.black),
+            borderSide:  const BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
         enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color:CupertinoColors.systemGrey3),
+            borderSide: const BorderSide(color:CupertinoColors.systemGrey3),
             borderRadius: BorderRadius.circular(8)),
         focusedBorder: OutlineInputBorder(
-            borderSide:  BorderSide(color: Colors.black),
+            borderSide:  const BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
         labelText: "Search Computer Accessories",
         suffixIcon: InkWell(
             onTap: (){
               Get.defaultDialog(
                   title: "Filter",
-                  titleStyle: TextStyle(
+                  titleStyle: const TextStyle(
                       color:Color(0xff9a0000), fontWeight: FontWeight.bold),
                   content: Column(
                     children: [
@@ -36,69 +36,78 @@ var value=-1;
                           decoration: InputDecoration(
                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                   borderSide:
-                                  BorderSide(color: Colors.black))),
+                                  const BorderSide(color: Colors.black))),
                           value: value,
-                          items: [
+                          items: const [
                             DropdownMenuItem(
-                              child: Text("Accessories"),
                               value: -1,
+                              child: Text("Accessories"),
                             ),
                             DropdownMenuItem(
-                                child: Text("Mouse"), value: 0),
+                                value: 0,
+                                child: Text("Mouse")),
                             DropdownMenuItem(
-                                child: Text("Keyboard"), value: 1),
+                                value: 1,
+                                child: Text("Keyboard")),
                             DropdownMenuItem(
-                                child: Text("Headphone"), value: 2)
+                                value: 2,
+                                child: Text("Headphone"))
                           ],
                           onChanged: (v) {}),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       DropdownButtonFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide:
-                                  BorderSide(color: Colors.black))),
+                                  const BorderSide(color: Colors.black))),
                           value: value,
-                          items: [
+                          items: const [
                             DropdownMenuItem(
-                              child: Text("HardWare"),
                               value: -1,
+                              child: Text("HardWare"),
                             ),
                             DropdownMenuItem(
-                                child: Text("Ram"), value: 0),
+                                value: 0,
+                                child: Text("Ram")),
                             DropdownMenuItem(
-                                child: Text("SSD"), value: 1),
+                                value: 1,
+                                child: Text("SSD")),
                             DropdownMenuItem(
-                                child: Text("Cooling System"), value: 2)
+                                value: 2,
+                                child: Text("Cooling System"))
                           ],
                           onChanged: (v) {}),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       DropdownButtonFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                   borderSide:
-                                  BorderSide(color: Colors.black))),
+                                  const BorderSide(color: Colors.black))),
                           value: value,
-                          items: [
+                          items: const [
                             DropdownMenuItem(
-                              child: Text("MotherBoard"),
                               value: -1,
+                              child: Text("MotherBoard"),
                             ),
                             DropdownMenuItem(
-                                child: Text("Msi"), value: 0),
+                                value: 0,
+                                child: Text("Msi")),
                             DropdownMenuItem(
-                                child: Text("Gygabyte"), value: 1),
+                                value: 1,
+                                child: Text("Gygabyte")),
                             DropdownMenuItem(
-                                child: Text("ColorFull"), value: 2)
+                                value: 2,
+                                child: Text("ColorFull"))
                           ],
                           onChanged: (v) {}),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       CommonButton(
                           buttonName: "Search", onTap: () => Get.back())
                     ],
                   ));
             },
-            child: Card(color:Color(0xff9a0000),child: Icon(Icons.search,color: Colors.white,)))
+            child: const Card(color:Color(0xff9a0000),child: Icon(Icons.search,color: Colors.white,)))
       ),
     );
   }

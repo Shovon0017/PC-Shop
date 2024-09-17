@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 
-class Order extends StatefulWidget {
-  const Order({super.key});
+class ConfirmOrder extends StatefulWidget {
+  const ConfirmOrder({super.key});
 
   @override
-  State<Order> createState() => _OrderState();
+  State<ConfirmOrder> createState() => _ConfirmOrderState();
 }
 
-class _OrderState extends State<Order> {
+class _ConfirmOrderState extends State<ConfirmOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: const Color(0xffFFFFFF),
@@ -33,7 +33,7 @@ class _OrderState extends State<Order> {
       ),
       body: Column(
         children: [
-          const Text("Requested Order",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+          const Text("Confirm Order",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
           const SizedBox(
             height: 100,
           ),

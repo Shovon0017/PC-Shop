@@ -1,136 +1,74 @@
-class CartProductShowModel {
-  List<CartProducts>? cartProducts;
+class CartProductListModel {
+  List<ProductCart>? productCart;
 
-  CartProductShowModel({this.cartProducts});
+  CartProductListModel({this.productCart});
 
-  CartProductShowModel.fromJson(Map<String, dynamic> json) {
-    if (json['cartProducts'] != null) {
-      cartProducts = <CartProducts>[];
-      json['cartProducts'].forEach((v) {
-        cartProducts!.add(new CartProducts.fromJson(v));
+  CartProductListModel.fromJson(Map<String, dynamic> json) {
+    if (json['product_cart'] != null) {
+      productCart = <ProductCart>[];
+      json['product_cart'].forEach((v) {
+        productCart!.add(ProductCart.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.cartProducts != null) {
-      data['cartProducts'] = this.cartProducts!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (productCart != null) {
+      data['product_cart'] = productCart!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
-class CartProducts {
-  String? id;
-  String? images;
-  String? name;
-  String? category;
-  String? brand;
-  double? price;
-  int? stock;
-  Specifications? specifications;
+class ProductCart {
+  int? productId;
+  String? productImage;
+  ProductName? productName;
+  int? discountType;
+  dynamic discountPrice;
+  dynamic salePrice;
+  int? quantity;
 
-  CartProducts(
-      {this.id,
-        this.images,
-        this.name,
-        this.category,
-        this.brand,
-        this.price,
-        this.stock,
-        this.specifications});
+  ProductCart({this.productId, this.productImage, this.productName, this.discountType, this.discountPrice, this.salePrice, this.quantity});
 
-  CartProducts.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    images = json['Images'];
-    name = json['name'];
-    category = json['category'];
-    brand = json['brand'];
-    price = json['price'];
-    stock = json['stock'];
-    specifications = json['specifications'] != null
-        ? new Specifications.fromJson(json['specifications'])
-        : null;
+  ProductCart.fromJson(Map<String, dynamic> json) {
+    productId = json['product_id'];
+    productImage = json['product_image'];
+    productName = json['product_name'] != null ? ProductName.fromJson(json['product_name']) : null;
+    discountType = json['discount_type'];
+    discountPrice = json['discount_price'];
+    salePrice = json['sale_price'];
+    quantity = json['quantity'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['Images'] = this.images;
-    data['name'] = this.name;
-    data['category'] = this.category;
-    data['brand'] = this.brand;
-    data['price'] = this.price;
-    data['stock'] = this.stock;
-    if (this.specifications != null) {
-      data['specifications'] = this.specifications!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['product_id'] = productId;
+    data['product_image'] = productImage;
+    if (productName != null) {
+      data['product_name'] = productName!.toJson();
     }
+    data['discount_type'] = discountType;
+    data['discount_price'] = discountPrice;
+    data['sale_price'] = salePrice;
+    data['quantity'] = quantity;
     return data;
   }
 }
 
-class Specifications {
-  int? cores;
-  int? threads;
-  String? baseClock;
-  String? turboClock;
-  String? cache;
-  String? memory;
-  String? boostClock;
-  String? capacity;
-  String? type;
-  String? speed;
-  String? latency;
-  String? readSpeed;
-  String? writeSpeed;
+class ProductName {
+  String? en;
 
-  Specifications(
-      {this.cores,
-        this.threads,
-        this.baseClock,
-        this.turboClock,
-        this.cache,
-        this.memory,
-        this.boostClock,
-        this.capacity,
-        this.type,
-        this.speed,
-        this.latency,
-        this.readSpeed,
-        this.writeSpeed});
+  ProductName({this.en});
 
-  Specifications.fromJson(Map<String, dynamic> json) {
-    cores = json['cores'];
-    threads = json['threads'];
-    baseClock = json['base_clock'];
-    turboClock = json['turbo_clock'];
-    cache = json['cache'];
-    memory = json['memory'];
-    boostClock = json['boost_clock'];
-    capacity = json['capacity'];
-    type = json['type'];
-    speed = json['speed'];
-    latency = json['latency'];
-    readSpeed = json['read_speed'];
-    writeSpeed = json['write_speed'];
+  ProductName.fromJson(Map<String, dynamic> json) {
+    en = json['en'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['cores'] = this.cores;
-    data['threads'] = this.threads;
-    data['base_clock'] = this.baseClock;
-    data['turbo_clock'] = this.turboClock;
-    data['cache'] = this.cache;
-    data['memory'] = this.memory;
-    data['boost_clock'] = this.boostClock;
-    data['capacity'] = this.capacity;
-    data['type'] = this.type;
-    data['speed'] = this.speed;
-    data['latency'] = this.latency;
-    data['read_speed'] = this.readSpeed;
-    data['write_speed'] = this.writeSpeed;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['en'] = en;
     return data;
   }
 }

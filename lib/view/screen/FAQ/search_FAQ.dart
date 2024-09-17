@@ -14,20 +14,20 @@ class SearchFieldFAQ extends StatelessWidget {
       onChanged: onChanged,
       decoration: InputDecoration(
           border: OutlineInputBorder(
-              borderSide:  BorderSide(color: Colors.black),
+              borderSide:  const BorderSide(color: Colors.black),
               borderRadius: BorderRadius.circular(8)),
           enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color:CupertinoColors.systemGrey3),
+              borderSide: const BorderSide(color:CupertinoColors.systemGrey3),
               borderRadius: BorderRadius.circular(8)),
           focusedBorder: OutlineInputBorder(
-              borderSide:  BorderSide(color: Colors.black),
+              borderSide:  const BorderSide(color: Colors.black),
               borderRadius: BorderRadius.circular(8)),
           labelText: "Search FAQ",
           suffixIcon: InkWell(
               onTap: (){
 
               },
-              child: Card(color:Colors.blue,child: Icon(Icons.search,color: Colors.white,)))
+              child: const Card(color:Colors.blue,child: Icon(Icons.search,color: Colors.white,)))
       ),
     );
   }

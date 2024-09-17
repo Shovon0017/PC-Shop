@@ -1,8 +1,8 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pc_mart/view/screen/Profile/Profile.dart';
-import 'package:pc_mart/view/screen/cart/cart_list.dart';
+import 'package:pc_mart/view/screen/Profile/profile.dart';
+import 'package:pc_mart/view/screen/cart/cart.dart';
 import 'package:pc_mart/view/screen/home%20api%20version/home.dart';
 class BottomNavBarController extends GetxController {
   final pageController = PageController(initialPage: 0);
@@ -13,9 +13,9 @@ class BottomNavBarController extends GetxController {
   RxInt page = 0.obs;
 
   List<Widget> bottomBarPages = [
-    Home(),
-    CartScreen(),
-    Profile()
+    const Home(),
+    const Cart(),
+    const Profile()
   ];
   @override
   void onInit() {

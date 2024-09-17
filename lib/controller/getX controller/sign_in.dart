@@ -20,7 +20,7 @@ class SignInController extends GetxController {
 
     if (message) {
       log("Next Page");
-      Get.offAll(() =>  NavigationBarShow());
+      Get.offAll(() =>  const NavigationBarShow());
       return;
     }
   }

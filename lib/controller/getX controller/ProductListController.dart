@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/Model/productListModel.dart';
 import 'package:pc_mart/controller/api%20service/ProductListService.dart';
@@ -23,7 +22,7 @@ class HomeController extends GetxController {
 
   searchFunction({required String searchText}) async {
     isLoading.value = true;
-    log("-------------- ${searchText}");
+    log("-------------- $searchText");
     productList = finalProductList
         .where((value) =>
     value.nameEn!.toLowerCase().contains(searchText.toLowerCase())  ||

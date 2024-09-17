@@ -1,18 +1,15 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/view/screen/FAQ/search_FAQ.dart';
-import 'package:pc_mart/view/screen/notification/notification.dart';
 class FAQ extends StatelessWidget {
   const FAQ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xffFFFFFF),
+    return Scaffold(backgroundColor: const Color(0xffFFFFFF),
       appBar:AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32,
             width: 114,
@@ -24,18 +21,18 @@ class FAQ extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal:10),
           child: Column(
             children: [
-              Text("FAQ",
+              const Text("FAQ",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               SearchFieldFAQ(onChanged: (String Text){
               }),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Expanded(
                 child: ListView.builder(
                     itemCount: 3,
-                    physics: PageScrollPhysics(),
+                    physics: const PageScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context,index){
-                      return SizedBox(
+                      return const SizedBox(
                         height: 60,
                         width: double.infinity,
                         child: Card(

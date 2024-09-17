@@ -12,10 +12,10 @@ class ForgetPass extends StatelessWidget {
     ForgetPasswordController controller =Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Forget Password"),
+        title: const Text("Forget Password"),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
           child:Column(
             children: [
 

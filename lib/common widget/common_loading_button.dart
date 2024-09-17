@@ -15,7 +15,7 @@ class CommonLoadingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: buttonColor ?? Color(0xff9a0000),
+      color: buttonColor ?? const Color(0xff9a0000),
       child: SizedBox(
         height: buttonHeight ?? 50,
         width: buttonWidth ?? MediaQuery.sizeOf(context).width,

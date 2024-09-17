@@ -1,25 +1,22 @@
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:pc_mart/common%20widget/CommonIcon.dart';
-import 'package:pc_mart/view/screen/notification/notification.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xffFFFFFF),
+    return Scaffold(backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         title: SizedBox(
             height: 32,
             width: 114,
             child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:10),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal:10),
         child: Column(
           children: [
             Text("Setting",
@@ -34,7 +31,7 @@ class Setting extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left:20),
+                      padding: EdgeInsets.only(left:20),
                       child: Text("Language"),
                     ),
                   ],
@@ -51,7 +48,7 @@ class Setting extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left:20),
+                      padding: EdgeInsets.only(left:20),
                       child: Text("About"),
                     ),
                   ],

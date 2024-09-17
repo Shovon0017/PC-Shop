@@ -19,13 +19,13 @@ class NavigationBarShow extends StatelessWidget {
       (controller.bottomBarPages.length <= controller.maxCount.value)
           ? AnimatedNotchBottomBar(
         notchBottomBarController: controller.nController,
-        color: Color(0xff9a0000),
+        color: const Color(0xff9a0000),
         showLabel: true,
         textOverflow: TextOverflow.visible,
         maxLine: 1,
         shadowElevation:10,
         kBottomRadius: 28.0,
-        notchColor: Color(0xffFFFFFF),
+        notchColor: const Color(0xffFFFFFF),
         removeMargins: false,
         bottomBarHeight: 80,
         bottomBarWidth: 500,
