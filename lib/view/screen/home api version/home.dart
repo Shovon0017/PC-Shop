@@ -2,6 +2,7 @@
 
 import 'dart:developer';
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
@@ -35,79 +36,89 @@ class Home extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            const Text("All Products",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-            const SizedBox(
-              height: 30,
-            ),
-            SearchField(
-              onChanged: (String text ) {
-                log("===== onChanged : $text ==================");
-                 controller.searchFunction(searchText: text);
-              },
-            ),
-            const SizedBox(height: 10),
-            Obx(() => controller.isLoading.isTrue
-                ? const Center(child: CircularProgressIndicator())
-                : controller.productList.isEmpty
-                ? const Center(
-                child: CommonText(title: "Empty Product List"))
-                : Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    GridView.builder(
-                      physics:const PageScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: controller.productList.length,
-                      gridDelegate:
-                       const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                      ),
-                      itemBuilder: (context, index) {
-                        return InkWell(onTap: (){
-                          Get.to(()=>ProductInfo(id:index, productData: controller.productList[index]));
-                        },
-                          child: Card(
-                            elevation: 4,
-                            color: Colors.white,
-                            child: SizedBox(
-                              height: 220,
-                              width:
-                              MediaQuery.sizeOf(context).width /
-                                  2.2,
-                              child: Column(
-                                crossAxisAlignment:
-                                CrossAxisAlignment.center,
-                                children: [
-                                  SizedBox(
-                                  height: 100,
-                                      width: 100,
-                                      child: Image(image: AssetImage("${controller.productList[index].image}"))),
-                                  CommonText(
-                                      title: "ID : ${controller.productList[index].productId}"),
-                                  CommonText(
-                                      title:
-                                      "Name : ${controller.productList[index].nameEn}"),
-                                  CommonText(
-                                      title:
-                                      "Price : ${controller.productList[index].regPrice}Tk"),
-                                ],
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+      body: Expanded(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+               Text("All Products",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+               SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal:10),
+                child: SearchField(
+                  onChanged: (String text ) {
+                    log("===== onChanged : $text ==================");
+                     controller.searchFunction(searchText: text);
+                  },
                 ),
               ),
-            )),
-          ],
+              CarouselSlider(items: [
+                Container(
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pc accesories.webp')),borderRadius: BorderRadius.circular(15)),
+                )
+
+              ], options: CarouselOptions()),
+              const SizedBox(height: 10),
+              Obx(() => controller.isLoading.isTrue
+                  ? const Center(child: CircularProgressIndicator())
+                  : controller.productList.isEmpty
+                  ? const Center(
+                  child: CommonText(title: "Empty Product List"))
+                  : Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal:10),
+                        child: GridView.builder(
+                          physics:const PageScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: controller.productList.length,
+                          gridDelegate:
+                           const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                          ),
+                          itemBuilder: (context, index) {
+                            return InkWell(onTap: (){
+                              Get.to(()=>ProductInfo(id:index, productData: controller.productList[index]));
+                            },
+                              child: Card(
+                                elevation: 4,
+                                color: Colors.white,
+                                child: SizedBox(
+                                  height: 220,
+                                  width:
+                                  MediaQuery.sizeOf(context).width /
+                                      2.2,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                      height: 100,
+                                          width: 100,
+                                          child: Image(image: AssetImage("${controller.productList[index].image}"))),
+                                      CommonText(
+                                          title: "ID : ${controller.productList[index].productId}"),
+                                      CommonText(
+                                          title:
+                                          "Name : ${controller.productList[index].nameEn}"),
+                                      CommonText(
+                                          title:
+                                          "Price : ${controller.productList[index].regPrice}Tk"),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  )),
+            ],
+          ),
         ),
       ),
     );

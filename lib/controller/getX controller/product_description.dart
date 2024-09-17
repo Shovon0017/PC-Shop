@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:pc_mart/controller/api%20service/product_description.dart';
 
 class DescriptionController extends GetxController {
-  CarouselController carouselController = CarouselController();
   RxInt selectedImgIndex = 0.obs;
   RxInt productQty = 1.obs;
   var detailsData = {}.obs;

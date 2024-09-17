@@ -28,7 +28,7 @@ class NoCartProductFoundWidget extends StatelessWidget {
           CommonButton(
               buttonWidth: size.width / 1.5,
               buttonName: "Add To Cart", onTap: (){
-            Get.to(()=>const NavigationBarShow());
+            Get.offAll(()=> NavigationBarShow());
           })
         ],
       ),
