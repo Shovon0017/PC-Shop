@@ -1,9 +1,9 @@
-class ProductList{
-  static Map<String,dynamic> productlist={
+class ProductList {
+  static Map<String, dynamic> productlist = {
     "products": [
       {
         "id": "1",
-        "Images":"images/Intel_Core_i9_13900K_header_5.png",
+        "Images": "images/Intel_Core_i9_13900K_header_5.png",
         "name": "Intel Core i9-13900K",
         "category": "Processor",
         "brand": "Intel",
@@ -19,7 +19,7 @@ class ProductList{
       },
       {
         "id": "2",
-        "Images":"images/geforce-rtx-4090-gaming-oc-24g-01-500x500.webp",
+        "Images": "images/geforce-rtx-4090-gaming-oc-24g-01-500x500.webp",
         "name": "NVIDIA GeForce RTX 4090",
         "category": "Graphics Card",
         "brand": "NVIDIA",
@@ -34,7 +34,7 @@ class ProductList{
       },
       {
         "id": "3",
-        "Images":"images/Corsair Vengeance LPX 16GB (2 x 8GB) DDR4.webp",
+        "Images": "images/Corsair Vengeance LPX 16GB (2 x 8GB) DDR4.webp",
         "name": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4",
         "category": "Memory",
         "brand": "Corsair",
@@ -49,7 +49,7 @@ class ProductList{
       },
       {
         "id": "4",
-        "Images":"images/970-evo-plus-1tb-500x500.jpg",
+        "Images": "images/970-evo-plus-1tb-500x500.jpg",
         "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
         "category": "Storage",
         "brand": "Samsung",
@@ -64,7 +64,7 @@ class ProductList{
       },
       {
         "id": "5",
-        "Images":"images/asus-rog-strix-z790-e-motherboard-02.jpg",
+        "Images": "images/asus-rog-strix-z790-e-motherboard-02.jpg",
         "name": "ASUS ROG Strix Z790-E Gaming WiFi",
         "category": "Motherboard",
         "brand": "ASUS",
@@ -80,7 +80,7 @@ class ProductList{
       },
       {
         "id": "6",
-        "Images":"images/Cooler Master Hyper 212 EVO.jpg",
+        "Images": "images/Cooler Master Hyper 212 EVO.jpg",
         "name": "Cooler Master Hyper 212 EVO",
         "category": "Cooling",
         "brand": "Cooler Master",
@@ -95,7 +95,7 @@ class ProductList{
       },
       {
         "id": "7",
-        "Images":"images/NZXT H510 Elite.webp",
+        "Images": "images/NZXT H510 Elite.webp",
         "name": "NZXT H510 Elite",
         "category": "Case",
         "brand": "NZXT",
@@ -110,7 +110,7 @@ class ProductList{
       },
       {
         "id": "8",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
         "name": "Logitech G Pro X Wireless",
         "category": "Peripherals",
         "brand": "Logitech",
@@ -127,7 +127,7 @@ class ProductList{
       {
         "id": "9",
         "name": "NVIDIA GeForce RTX 4080",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/NVIDIA GeForce RTX 4080.webp",
         "category": "Graphics Card",
         "brand": "NVIDIA",
         "price": 1199.99,
@@ -141,7 +141,7 @@ class ProductList{
       {
         "id": "10",
         "name": "AMD Ryzen 9 7950X",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/AMD Ryzen 9 7950X.webp",
         "category": "Processor",
         "brand": "AMD",
         "price": 699.99,
@@ -156,21 +156,17 @@ class ProductList{
       {
         "id": "11",
         "name": "Corsair Vengeance LPX 32GB",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/Corsair Vengeance LPX 32GB.jpg",
         "category": "Memory",
         "brand": "Corsair",
         "price": 139.99,
         "stock": 18,
-        "specs": {
-          "type": "DDR4",
-          "speed": "3200 MHz",
-          "casLatency": "16"
-        }
+        "specs": {"type": "DDR4", "speed": "3200 MHz", "casLatency": "16"}
       },
       {
         "id": "12",
         "name": "Samsung 980 PRO 1TB",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/Samsung 980 PRO 1TB.jpg",
         "category": "Storage",
         "brand": "Samsung",
         "price": 159.99,
@@ -184,7 +180,7 @@ class ProductList{
       {
         "id": "13",
         "name": "ASUS ROG Crosshair VIII Hero",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/ASUS ROG Crosshair VIII Hero.jpg",
         "category": "Motherboard",
         "brand": "ASUS",
         "price": 349.99,
@@ -198,7 +194,7 @@ class ProductList{
       {
         "id": "14",
         "name": "Noctua NH-U12S",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/Noctua NH-U12S.jpg",
         "category": "Cooler",
         "brand": "Noctua",
         "price": 69.95,
@@ -212,7 +208,7 @@ class ProductList{
       {
         "id": "15",
         "name": "Fractal Design Meshify C",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/Fractal Design Meshify C.jpg",
         "category": "Case",
         "brand": "Fractal Design",
         "price": 99.99,
@@ -226,7 +222,7 @@ class ProductList{
       {
         "id": "16",
         "name": "EVGA SuperNOVA 850 G5",
-        "Images":"images/Logitech-G-PRO-X-1-1-500x500.jpg.webp",
+        "Images": "images/EVGA SuperNOVA 850 G5.png",
         "category": "Power Supply",
         "brand": "EVGA",
         "price": 149.99,
@@ -235,6 +231,108 @@ class ProductList{
           "wattage": "850W",
           "efficiencyRating": "80+ Gold",
           "modular": "Fully Modular"
+        }
+      },
+      {
+        "id": "17",
+        "name": "Dell UltraSharp U2720Q",
+        "Images": "images/Dell UltraSharp U2720Q.jpg",
+        "category": "Monitor",
+        "brand": "Dell",
+        "price": 549.99,
+        "screenSize": "27 inches",
+        "resolution": "3840 x 2160",
+        "refreshRate": "60 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "IPS",
+          "brightness": "400 cd/m²",
+          "contrastRatio": "1300:1"
+        }
+      },
+      {
+        "id": "18",
+        "name": "LG 34GN850-B",
+        "Images": "images/LG 34GN850-B.jpg",
+        "category": "Monitor",
+        "brand": "LG",
+        "price": 799.99,
+        "screenSize": "34 inches",
+        "resolution": "3440 x 1440",
+        "refreshRate": "144 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "Nano IPS",
+          "brightness": "400 cd/m²",
+          "contrastRatio": "1000:1"
+        }
+      },
+      {
+        "id": "19",
+        "name": "ASUS ROG Swift PG259QN",
+        "Images": "images/ASUS ROG Swift PG259QN.jpg",
+        "category": "Monitor",
+        "brand": "ASUS",
+        "price": 1399.99,
+        "screenSize": "24.5 inches",
+        "resolution": "3840 x 2160",
+        "refreshRate": "360 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "IPS",
+          "brightness": "400 cd/m²",
+          "contrastRatio": "1000:1"
+        }
+      },
+      {
+        "id": "20",
+        "name": "Acer Predator X27",
+        "Images": "images/Acer Predator X27.webp",
+        "category": "Monitor",
+        "brand": "Acer",
+        "price": 1699.99,
+        "screenSize": "27 inches",
+        "resolution": "3840 x 2160",
+        "refreshRate": "144 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "IPS",
+          "brightness": "600 cd/m²",
+          "contrastRatio": "1000:1"
+        }
+      },
+      {
+        "id": "21",
+        "name": "BenQ EW3270U",
+        "Images": "images/BenQ EW3270U.jpg",
+        "category": "Monitor",
+        "brand": "BenQ",
+        "price": 449.99,
+        "screenSize": "32 inches",
+        "resolution": "3840 x 2160",
+        "refreshRate": "60 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "VA",
+          "brightness": "300 cd/m²",
+          "contrastRatio": "3000:1"
+        }
+      },
+      {
+        "id": "22",
+        "name": "Samsung Odyssey G7",
+        "Images": "images/Samsung Odyssey G7.webp",
+        "category": "Monitor",
+        "brand": "Samsung",
+        "price": 699.99,
+        "screenSize": "27 inches",
+        "resolution": "2560 x 1440",
+        "refreshRate": "240 Hz",
+        "stock": 20,
+        "specs": {
+          "panelType": "VA",
+          "brightness": "600 cd/m²",
+          "contrastRatio": "2500:1"
         }
       }
     ]

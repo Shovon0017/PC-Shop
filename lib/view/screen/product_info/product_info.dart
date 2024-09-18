@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:pc_mart/Model/productListModel.dart';
 import 'package:pc_mart/common%20widget/CommonIcon.dart';
 import 'package:pc_mart/common%20widget/common_button.dart';
-import 'package:pc_mart/controller/getX%20controller/product_description.dart';
+import 'package:pc_mart/controller/getX%20controller/product_Info.dart';
 import 'package:pc_mart/view/screen/OrderInfo/OrderInfo.dart';
 import 'package:pc_mart/view/screen/notification/notification.dart';
 
@@ -18,7 +18,7 @@ class ProductInfo extends StatelessWidget {
    final Products productData;
   @override
   Widget build(BuildContext context) {
-    DescriptionController controller = Get.put(DescriptionController());
+    ProductInfoController controller = Get.put(ProductInfoController());
     controller.productAmount.value = double.parse(productData.regPrice.toString());
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
@@ -167,6 +167,8 @@ class ProductInfo extends StatelessWidget {
                       buttonWidth:150,
 
                         buttonName: "Add to cart", onTap: ()async{
+                        controller.addToCartProduct(productID: id, qty: 1);
+
                         Get.back();
                     })
                   ],

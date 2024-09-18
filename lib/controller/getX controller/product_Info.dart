@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pc_mart/controller/api%20service/product_description.dart';
 
-class DescriptionController extends GetxController {
+class ProductInfoController extends GetxController {
   RxInt selectedImgIndex = 0.obs;
   RxInt productQty = 1.obs;
   var detailsData = {}.obs;
@@ -14,13 +14,13 @@ class DescriptionController extends GetxController {
 
   @override
   void onInit() {
-    getProductDescription();
+    ProductInfoFun();
     super.onInit();
   }
 
-  getProductDescription() async {
+  ProductInfoFun() async {
     id = await Get.arguments ?? "0";
-    var a = await ProductDescriptionService.productDescriptionService(id: id);
+    var a = await ProductInfoService.productInfoService(id: id);
     if (a?.productDetails != null) {
       for (var i in a?.productDetails?.images ?? []) {
         imageList.add(i.toString());
