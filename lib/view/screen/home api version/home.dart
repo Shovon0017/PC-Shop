@@ -44,7 +44,6 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: SearchField(
                   onChanged: (String text) {
-                    log("===== onChanged : $text ==================");
                     controller.searchFunction(searchText: text);
                   },
                 ),
