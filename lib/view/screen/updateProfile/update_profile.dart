@@ -27,7 +27,7 @@ class UpdateProfile extends StatelessWidget {
           )
         ],
       ),
-      body: ,
+      body: Center(),
     );
   }
 }
