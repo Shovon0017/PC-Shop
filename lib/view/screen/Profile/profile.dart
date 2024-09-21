@@ -10,6 +10,7 @@ import 'package:pc_mart/view/screen/notification/notification.dart';
 import 'package:pc_mart/view/screen/requested_order/requested_order.dart';
 import 'package:pc_mart/view/screen/setting/setting.dart';
 import 'package:pc_mart/view/screen/support/support.dart';
+import 'package:pc_mart/view/screen/updateProfile/update_profile.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -114,6 +115,9 @@ class _ProfileState extends State<Profile> {
               const SizedBox(
                 height: 30,
               ),
+              CommonButton(buttonName: "Update Profile", onTap: (){
+                Get.to(()=>UpdateProfile());
+              }),
               CommonButton(buttonName: "Requested Order", onTap: () {
                 Get.to(()=>const Order());
               }),
