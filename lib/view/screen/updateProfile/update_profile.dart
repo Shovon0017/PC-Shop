@@ -10,6 +10,7 @@ class UpdateProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("UPDATE PROFILE"),
+        centerTitle: true,
       ),
     );
   }
