@@ -30,7 +30,9 @@ class UpdateProfile extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            Container(
 
+            )
           ],
         ),
       ),
