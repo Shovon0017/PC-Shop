@@ -17,7 +17,8 @@ class LanguageSelection extends StatelessWidget {
               const SizedBox(height: 90),
               CommonButton(buttonColor:Colors.grey ,
                   buttonName: "বাংলা",textColor: Colors.white, onTap: (){
-
+                    Get.to(()=>const SignIn(
+                    ));
               }),
               CommonButton(buttonColor:const Color(0xff9a0000) ,
                   buttonName: "English", onTap: (){
