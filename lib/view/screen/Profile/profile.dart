@@ -115,8 +115,6 @@ class _ProfileState extends State<Profile> {
               const SizedBox(
                 height: 30,
               ),
-              CommonButton(buttonName: "Update Profile", onTap: (){
-              }),
               CommonButton(buttonName: "Requested Order", onTap: () {
                 Get.to(()=>const Order());
               }),
