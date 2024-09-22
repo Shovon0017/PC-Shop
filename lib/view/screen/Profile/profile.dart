@@ -116,7 +116,7 @@ class _ProfileState extends State<Profile> {
                 height: 30,
               ),
               CommonButton(buttonName: "Update Profile", onTap: (){
-                Get.to(()=>UpdateProfile());
+
               }),
               CommonButton(buttonName: "Requested Order", onTap: () {
                 Get.to(()=>const Order());
