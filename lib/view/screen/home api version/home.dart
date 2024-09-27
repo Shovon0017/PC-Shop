@@ -20,13 +20,16 @@ class Home extends StatelessWidget {
       backgroundColor: const Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: const Color(0xffFFFFFF),
-        title: Image.asset("images/pcmart.jpg"),
+        title: SizedBox(
+            height: 32,
+            width: 114,
+            child: Image.asset("images/pcmart.jpg")),
         centerTitle: true,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: CommonIconButton(onTap: () {
-              Get.to(() => const NotificationShow());
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>const NotificationShow());
             }),
           )
         ],
